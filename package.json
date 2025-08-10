@@ -1,0 +1,53 @@
+{
+  "name": "pre-historic-vr",
+  "version": "1.0.0",
+  "description": "Complete VR Cultural Heritage System for Prehistoric Liberia",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "start": "npm run dev",
+    "backend": "cd backend && npm install && node server.js",
+    "frontend": "cd frontend && npm install && npm start",
+    "database:setup": "cd database && npm install && npm run setup",
+    "database:backup": "cd database && npm run backup",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install && cd ../database && npm install",
+    "build": "npm run build:backend && npm run build:frontend",
+    "test": "npm run test:backend && npm run test:frontend",
+    "clean": "rimraf backend/node_modules frontend/node_modules database/node_modules node_modules",
+    "setup": "node setup-everything.js",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npx expo start",
+    "build:backend": "cd backend && npm run build",
+    "build:frontend": "cd frontend && npx expo build",
+    "seed": "cd backend && npm run seed",
+    "test:backend": "cd backend && npm test",
+    "test:frontend": "cd frontend && npm test"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "rimraf": "^5.0.5"
+  },
+  "workspaces": [
+    "backend",
+    "frontend",
+    "database"
+  ],
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "keywords": [
+    "vr",
+    "cultural-heritage",
+    "liberia",
+    "education",
+    "museum",
+    "prehistoric",
+    "tribes"
+  ],
+  "author": "PRE_HISTORIC_VR Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/PRE_HISTORIC_VR.git"
+  }
+}

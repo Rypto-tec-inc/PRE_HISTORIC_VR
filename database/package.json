@@ -1,0 +1,20 @@
+{
+  "name": "prehistoric-vr-database",
+  "version": "1.0.0",
+  "description": "Database setup and utilities for PRE_HISTORIC_VR",
+  "scripts": {
+    "setup": "node scripts/setup.js",
+    "migrate": "node migrations/001_initial_setup.js",
+    "backup": "node scripts/backup.js backup",
+    "restore": "node scripts/backup.js restore",
+    "list-backups": "node scripts/backup.js list"
+  },
+  "dependencies": {
+    "mongodb": "^5.9.0",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.3.1"
+  },
+  "keywords": ["database", "mongodb", "cultural-heritage", "vr"],
+  "author": "PRE_HISTORIC_VR Team",
+  "license": "MIT"
+} 
